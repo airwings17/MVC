@@ -10,6 +10,9 @@ namespace myMVC
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// Test
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
