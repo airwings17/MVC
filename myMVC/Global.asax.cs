@@ -13,7 +13,7 @@ namespace myMVC
         /// <summary>
         /// Test
         /// </summary>
-        protected void Application_Start()
+        protected void Application_Start() 
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
