@@ -1,0 +1,15 @@
+﻿@model myMVC.Models.Movies
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+<ul>
+    @foreach(var movie in Model.AllMovies)
+    {
+        <li><a href="#">@movie.Name</a></li>
+    }
+
+</ul>

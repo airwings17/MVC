@@ -1,0 +1,12 @@
+﻿@model myMVC.Models.Customer
+@{
+    ViewBag.Title = "CustomerInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Info</h2>
+
+Name: @Model.CustName
+
+
+@Html.ActionLink("Back", "Index", "Customers")

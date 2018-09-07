@@ -1,0 +1,16 @@
+﻿@model myMVC.Models.Customers
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<ul>
+    @foreach (var cust in Model.AllCustomers)
+    {
+        <li>@Html.ActionLink(cust.CustName, "customer/"+@cust.Id.ToString(), "Customers")</li>
+    }
+
+
+</ul>

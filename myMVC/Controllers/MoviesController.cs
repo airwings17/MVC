@@ -58,7 +58,15 @@ namespace myMVC.Controllers
             {
                 sortBy = "Name";
             }
-            return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            var movies = new Movies();
+            var allMivies = new List<Movie>();
+            allMivies.Add(new Movie { Name = "Enemy at the Gates", Id = 1 });
+            allMivies.Add(new Movie { Name = "Krish", Id = 2 });
+            //allMivies.Sort();
+            movies.AllMovies = allMivies;
+            return View(movies);
+
+            //return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
 
 
@@ -67,5 +75,15 @@ namespace myMVC.Controllers
         {
             return Content(string.Format(year + "/" + month));
         }
+
+
+        ////[Route("movies/}")]
+        //public ActionResult AllMovies(int year, int month)
+        //{
+        //    var movies = new Movies();
+        //    movies.AllMovies.Add(new Movie { Name = "Enemy at the Gates", Id = 1 });
+        //    movies.AllMovies.Add(new Movie { Name = "Krish", Id = 2 });
+        //    return View(movies);
+        //}
     }
 }
